@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th2 14, 2024 lúc 10:09 AM
--- Phiên bản máy phục vụ: 10.4.24-MariaDB
--- Phiên bản PHP: 8.1.6
+-- Host: localhost:3306
+-- Generation Time: Aug 06, 2024 at 08:57 AM
+-- Server version: 8.0.30
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,48 +18,50 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `demo_exam`
+-- Database: `demo_exam`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sinh_vien`
+-- Table structure for table `sinh_vien`
 --
 
 CREATE TABLE `sinh_vien` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) NOT NULL,
-  `year_of_birth` int(11) NOT NULL,
+  `year_of_birth` int NOT NULL,
   `phone_number` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `sinh_vien`
+-- Dumping data for table `sinh_vien`
 --
 
 INSERT INTO `sinh_vien` (`id`, `name`, `year_of_birth`, `phone_number`) VALUES
-(1, 'Nguyễn Văn A', 2004, '0987654321');
+(2, 'Ai thay nhung dong nay', 2004, '0396151784'),
+(3, 'la nguoi dep trai nhất the gioi', 2004, '19001009'),
+(5, 'ok', 123, '03695889');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `sinh_vien`
+-- Indexes for table `sinh_vien`
 --
 ALTER TABLE `sinh_vien`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `sinh_vien`
+-- AUTO_INCREMENT for table `sinh_vien`
 --
 ALTER TABLE `sinh_vien`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
